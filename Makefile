@@ -6,6 +6,7 @@ BUILD_DIR := build
 BASICS_DIR := 01-basics
 RENDER_DIR := 02-rendering-images
 EVENTS_DIR := 03-events
+KEYPRESS_DIR := 04-keypress
 
 basics: $(BASICS_DIR)/01-hello.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/01-hello $(CC_SDL2_FLAGS)
@@ -15,6 +16,9 @@ renderimages: $(RENDER_DIR)/02-images.c
 
 events: $(EVENTS_DIR)/03-events.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/03-events $(CC_SDL2_FLAGS)
+
+keypress: $(KEYPRESS_DIR)/04-keypress.c
+	$(CC_CLANG) $< -o $(BUILD_DIR)/04-keypress $(CC_SDL2_FLAGS_IMAGE)
 
 clean:
 	rm -f build/*
