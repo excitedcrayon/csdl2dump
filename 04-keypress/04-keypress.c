@@ -14,7 +14,7 @@ enum KeyPressSurfaces{
 
 const int WINDOW_WIDTH = 640;
 const int WINDOW_HEIGHT = 480;
-char const WINDOW_TITLE[] = "Keypress SDL";
+const char WINDOW_TITLE[] = "Keypress SDL";
 
 bool init(); //init SDL
 bool loadMedia(); // load nedia (images)
