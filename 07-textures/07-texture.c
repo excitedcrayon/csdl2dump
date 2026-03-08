@@ -20,6 +20,7 @@ SDL_Texture* currentTexture = NULL;
 const int WIDTH = 640;
 const int HEIGHT = 480;
 const char TITLE[] = "Textures SDL";
+const char IMG_PATH[] = "../07-textures/texture.png";
 
 int main(){
 
@@ -89,7 +90,7 @@ bool loadedMedia(){
 
     bool loaded = true;
 
-    currentTexture = loadTexture("../06-textures/texture.png");
+    currentTexture = loadTexture(IMG_PATH);
     if ( currentTexture == NULL ) {
         renderError("Failed to load texture image! ");
         loaded = false;
