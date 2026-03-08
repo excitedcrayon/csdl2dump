@@ -7,7 +7,8 @@ BASICS_DIR := 01-basics
 RENDER_DIR := 02-rendering-images
 EVENTS_DIR := 03-events
 KEYPRESS_DIR := 04-keypress
-TEXTURE_DIR = 07-textures
+TEXTURE_DIR := 07-textures
+GEOMETRY_RENDERING_DIR := 08-geometry-rendering
 
 basics: $(BASICS_DIR)/01-hello.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/01-hello $(CC_SDL2_FLAGS)
@@ -23,6 +24,9 @@ keypress: $(KEYPRESS_DIR)/04-keypress.c
 
 texture: $(TEXTURE_DIR)/07-texture.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/07-texture $(CC_SDL2_FLAGS_IMAGE)
+
+geometry: $(GEOMETRY_RENDERING_DIR)/08-geometry.c
+	$(CC_CLANG) $< -o $(BUILD_DIR)/08-geometry $(CC_SDL2_FLAGS_IMAGE)
 
 clean:
 	rm -f build/*
