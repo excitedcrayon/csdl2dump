@@ -9,6 +9,7 @@ EVENTS_DIR := 03-events
 KEYPRESS_DIR := 04-keypress
 TEXTURE_DIR := 07-textures
 GEOMETRY_RENDERING_DIR := 08-geometry-rendering
+VIEWPORT_DIR := 09-viewport
 
 basics: $(BASICS_DIR)/01-hello.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/01-hello $(CC_SDL2_FLAGS)
@@ -27,6 +28,9 @@ texture: $(TEXTURE_DIR)/07-texture.c
 
 geometry: $(GEOMETRY_RENDERING_DIR)/08-geometry.c
 	$(CC_CLANG) $< -o $(BUILD_DIR)/08-geometry $(CC_SDL2_FLAGS_IMAGE)
+
+viewport: $(VIEWPORT_DIR)/09-viewport.c
+	$(CC_CLANG) $< -o $(BUILD_DIR)/09-viewport $(CC_SDL2_FLAGS)
 
 clean:
 	rm -f build/*
